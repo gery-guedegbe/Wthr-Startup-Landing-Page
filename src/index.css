@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+button,
+a,
+.clickable {
+  cursor: none !important; /* Désactiver le curseur natif */
+}
+
+@layer base {
+  :root {
+    font-family: "Satoshi", "sans-serif";
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    cursor: none !important;
+    overflow: scroll; /* Autorise le défilement */
+    scrollbar-width: none; /* Pour Firefox */
+  }
+
+  body {
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #121212;
+  }
+
+  body::-webkit-scrollbar {
+    display: none; /* Pour Chrome, Safari, et Edge */
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-screen-larg;
+  }
+
+  .heading_1 {
+    @apply text-4xl font-bold leading-[105%] -tracking-[1.2px] text-customTextPrimary md:text-5xl xl:text-6xl;
+  }
+
+  .heading_2 {
+    @apply text-3xl font-bold leading-5 text-customTextPrimary md:text-4xl;
+  }
+
+  .heading_3 {
+    @apply text-3xl font-medium leading-5 text-customTextPrimary md:text-4xl;
+  }
+
+  .tag {
+    @apply text-sm font-bold leading-5 tracking-widest text-customHighLightPrimary md:text-base;
+  }
+
+  .bodyL {
+    @apply text-sm font-medium leading-5 text-customTextPrimary;
+  }
+
+  .bodyM {
+    @apply text-sm font-medium leading-5 text-customTextPrimary;
+  }
+
+  .bodyS {
+    @apply text-xs font-medium leading-6 text-customTextPrimary;
+  }
+
+  .gradient-text {
+    -webkit-background-clip: text; /* Définit le clip sur le texte */
+    -webkit-text-fill-color: transparent; /* Rend la couleur du texte transparente */
+  }
+
+  /* .bg-radial-shadow {
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.6) 60%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 10;
+  } */
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+/* Animation pour la bordure */
+@keyframes slideInBorder {
+  from {
+    border-width: 0;
+  }
+  to {
+    border-width: 2px;
+  }
+}
+
+/* Classe pour animer les bordures */
+.border-animated {
+  position: relative;
+  border-right: 0 solid transparent;
+  border-left: 0 solid transparent;
+  animation: slideInBorder 1s forwards;
+}
