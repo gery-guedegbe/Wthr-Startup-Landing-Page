@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import Blog from "../sections/Blog/Blog";
 import Download from "../sections/Download/Download";
-import Faq from "../sections/FAQ/FAQ";
+import Faq from "../sections/FAQ/Faq";
 import Features from "../sections/Features/Features";
 import HeroSection from "../sections/HeroSection/HeroSection";
 import ScrollSection from "../sections/ScrollSection/ScrollSection";
