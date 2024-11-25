@@ -56,8 +56,8 @@ Voici un aperçu des sections principales de **Wthr** :
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/<your-username>/Wthr.git
-   cd Wthr
+   git clone https://github.com/gery-guedegbe/Wthr-Startup-Landing-Page.git
+   cd wthr-startup-landing-page
    ```
 2. Installez les dépendances :
    ```bash
